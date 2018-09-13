@@ -1,0 +1,9 @@
+<h1>Sign Up As A New User</h1>
+<% if flash[:errors] %>
+<ul>
+  <% flash[:errors].each do |e| %>
+    <li><%= e %></li>  
+  <% end %>
+</ul>
+<% end %>
+<%= render "form", user: @user, type: :new %>
